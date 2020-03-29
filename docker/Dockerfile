@@ -1,4 +1,6 @@
 FROM alpine:edge AS builder
+ARG CURRENT_VERSION
+
 RUN apk add --no-cache crystal shards libc-dev \
     yaml-dev libxml2-dev sqlite-dev zlib-dev openssl-dev \
     sqlite-static zlib-static openssl-libs-static
